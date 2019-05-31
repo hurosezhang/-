@@ -13,6 +13,7 @@
 		7E7CBD7F229E9F4D008DC9B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E7CBD7E229E9F4D008DC9B5 /* Assets.xcassets */; };
 		7E7CBD82229E9F4D008DC9B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E7CBD80229E9F4D008DC9B5 /* LaunchScreen.storyboard */; };
 		7E7CBD85229E9F4D008DC9B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7CBD84229E9F4D008DC9B5 /* main.m */; };
+		7E7CBD9022A101E0008DC9B5 /* icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7E7CBD8F22A101E0008DC9B5 /* icon.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		7E7CBD81229E9F4D008DC9B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E7CBD83229E9F4D008DC9B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E7CBD84229E9F4D008DC9B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7E7CBD8F22A101E0008DC9B5 /* icon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = icon.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		7E7CBD74229E9F4A008DC9B5 /* YZCoderLearn */ = {
 			isa = PBXGroup;
 			children = (
+				7E7CBD8F22A101E0008DC9B5 /* icon.bundle */,
 				7E7CBD75229E9F4A008DC9B5 /* AppDelegate.h */,
 				7E7CBD76229E9F4A008DC9B5 /* AppDelegate.m */,
 				7E7CBD78229E9F4A008DC9B5 /* ViewController.h */,
@@ -128,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E7CBD9022A101E0008DC9B5 /* icon.bundle in Resources */,
 				7E7CBD82229E9F4D008DC9B5 /* LaunchScreen.storyboard in Resources */,
 				7E7CBD7F229E9F4D008DC9B5 /* Assets.xcassets in Resources */,
 				7E7CBD7D229E9F4A008DC9B5 /* Main.storyboard in Resources */,

@@ -12,7 +12,13 @@
 
 @end
 @implementation TestView
-
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
 - (void)willMoveToSuperview:(nullable UIView *)newSuperview {
     [super willMoveToSuperview:newSuperview];
 }
@@ -32,6 +38,29 @@
 @end
 
 @implementation ViewController
+- (instancetype)init {
+    if (self = [super init]) {
+        
+    }
+    return self;
+}
+- (void)loadView {
+    [super loadView];
+    
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+}
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+}
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

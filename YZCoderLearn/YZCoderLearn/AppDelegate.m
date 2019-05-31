@@ -17,6 +17,36 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    UITabBarController * tabBarController = [[UITabBarController alloc] init];
+    
+    UIViewController *viewController1 = [[UIViewController alloc] init];
+    viewController1.tabBarItem.title = @"新闻";
+    viewController1.view.backgroundColor= [UIColor redColor];
+    viewController1.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page@2x.png"];
+    viewController1.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x.png"];
+    
+    UIViewController *viewController2 = [[UIViewController alloc] init];
+    viewController2.tabBarItem.title = @"视频";
+    viewController2.view.backgroundColor= [UIColor blueColor];
+    viewController2.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/video@2x.png"];
+    viewController2.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/video_selected@2x.png"];
+    
+    UIViewController *viewController3 = [[UIViewController alloc] init];
+    viewController3.tabBarItem.title = @"推荐";
+    viewController3.view.backgroundColor= [UIColor yellowColor];
+    viewController3.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/like@2x.png"];
+    viewController3.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/like_selected@2x.png"];
+    
+    UIViewController *viewController4 = [[UIViewController alloc] init];
+    viewController4.tabBarItem.title = @"我的";
+    viewController4.view.backgroundColor= [UIColor lightGrayColor];
+    viewController4.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/home@2x.png"];
+    viewController4.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/home_selected@2x.png"];
+    
+    tabBarController.viewControllers = @[viewController1,viewController2,viewController3,viewController4];
+    self.window.rootViewController = tabBarController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
