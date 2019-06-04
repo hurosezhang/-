@@ -19,14 +19,13 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     UITabBarController * tabBarController = [[UITabBarController alloc] init];
-    
-  ViewController   * viewController = [[ViewController alloc] init];
-    UINavigationController * NavigationController =[[UINavigationController alloc] initWithRootViewController:viewController ];
-//    UIViewController *viewController1 = [[UIViewController alloc] init];
-    NavigationController.tabBarItem.title = @"新闻";
-    NavigationController.view.backgroundColor= [UIColor purpleColor];
-    NavigationController.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page@2x.png"];
-    NavigationController.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x.png"];
+//  ViewController   * viewController = [[ViewController alloc] init];
+  
+    ViewController *viewController1 = [[ViewController alloc] init];
+    viewController1.tabBarItem.title = @"新闻";
+    viewController1.view.backgroundColor= [UIColor purpleColor];
+    viewController1.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page@2x.png"];
+    viewController1.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x.png"];
     
     UIViewController *viewController2 = [[UIViewController alloc] init];
     viewController2.tabBarItem.title = @"视频";
@@ -46,8 +45,9 @@
     viewController4.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/home@2x.png"];
     viewController4.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/home_selected@2x.png"];
     
-    tabBarController.viewControllers = @[NavigationController,viewController2,viewController3,viewController4];
-    self.window.rootViewController = tabBarController;
+    tabBarController.viewControllers = @[viewController1,viewController2,viewController3,viewController4];
+      UINavigationController * NavigationController =[[UINavigationController alloc] initWithRootViewController:tabBarController ];
+    self.window.rootViewController = NavigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }
