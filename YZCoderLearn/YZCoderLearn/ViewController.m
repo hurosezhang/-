@@ -65,13 +65,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    TestView * view = [[TestView alloc] init];
+    view.frame = CGRectMake(150, 50, 100, 100);
+    view.backgroundColor = [UIColor redColor];
+
+    [self.view addSubview: view];
     
-    [self.view addSubview:({
-        TestView * view = [[TestView alloc] init];
-        view.frame = CGRectMake(150, 50, 100, 100);
-        view.backgroundColor = [UIColor redColor];
-         view;
-    } )];
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushVC)];
+    
+    [view addGestureRecognizer:tapGesture];
+    
+}
+- (void)pushVC {
+    UIViewController *viewController = [[UIViewController alloc] init];
+    viewController.view.backgroundColor = [UIColor whiteColor];
+    viewController.navigationItem.title = @"内容";
+    viewController.title = @"";
+    viewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"右侧标题" style:UIBarButtonItemStylePlain target:self action:nil];
+    
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 
