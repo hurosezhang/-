@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E1BA88622A8B1A500262010 /* GTVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1BA88522A8B1A500262010 /* GTVideoViewController.m */; };
 		7E7CBD77229E9F4A008DC9B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7CBD76229E9F4A008DC9B5 /* AppDelegate.m */; };
 		7E7CBD7A229E9F4A008DC9B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7CBD79229E9F4A008DC9B5 /* ViewController.m */; };
 		7E7CBD7F229E9F4D008DC9B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E7CBD7E229E9F4D008DC9B5 /* Assets.xcassets */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E1BA88422A8B1A500262010 /* GTVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTVideoViewController.h; sourceTree = "<group>"; };
+		7E1BA88522A8B1A500262010 /* GTVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTVideoViewController.m; sourceTree = "<group>"; };
 		7E7CBD72229E9F4A008DC9B5 /* YZCoderLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YZCoderLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E7CBD75229E9F4A008DC9B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7E7CBD76229E9F4A008DC9B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,6 +66,8 @@
 				7E7CBD76229E9F4A008DC9B5 /* AppDelegate.m */,
 				7E7CBD78229E9F4A008DC9B5 /* ViewController.h */,
 				7E7CBD79229E9F4A008DC9B5 /* ViewController.m */,
+				7E1BA88422A8B1A500262010 /* GTVideoViewController.h */,
+				7E1BA88522A8B1A500262010 /* GTVideoViewController.m */,
 				7E7CBD7E229E9F4D008DC9B5 /* Assets.xcassets */,
 				7E7CBD80229E9F4D008DC9B5 /* LaunchScreen.storyboard */,
 				7E7CBD83229E9F4D008DC9B5 /* Info.plist */,
@@ -144,6 +149,7 @@
 				7E7CBD7A229E9F4A008DC9B5 /* ViewController.m in Sources */,
 				7E7CBD85229E9F4D008DC9B5 /* main.m in Sources */,
 				7E7CBD77229E9F4A008DC9B5 /* AppDelegate.m in Sources */,
+				7E1BA88622A8B1A500262010 /* GTVideoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

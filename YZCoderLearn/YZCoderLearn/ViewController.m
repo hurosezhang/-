@@ -33,7 +33,7 @@
 }
 
 @end
-@interface ViewController ()
+@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 
@@ -65,24 +65,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    TestView * view = [[TestView alloc] init];
-    view.frame = CGRectMake(150, 50, 100, 100);
-    view.backgroundColor = [UIColor redColor];
 
-    [self.view addSubview: view];
+    self.view.backgroundColor = [UIColor whiteColor];
     
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushVC)];
-    
-    [view addGestureRecognizer:tapGesture];
+    UITableView * tableView =  [[UITableView alloc] initWithFrame:self.view.bounds];
+    tableView.dataSource = self;
+    tableView.delegate = self;
+    [self.view addSubview: tableView];
     
 }
-- (void)pushVC {
-    UIViewController *viewController = [[UIViewController alloc] init];
-    viewController.view.backgroundColor = [UIColor whiteColor];
-    viewController.navigationItem.title = @"内容";
-    viewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"右侧标题" style:UIBarButtonItemStylePlain target:self action:nil];
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 100;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIViewController * controllerView = [[UIViewController alloc] init];
+    controllerView.title = [NSString stringWithFormat:@"主标题%@",@(indexPath.row)];
+    [self.navigationController pushViewController:controllerView animated:YES];
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 20;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    [self.navigationController pushViewController:viewController animated:YES];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"id"];
+    if (cell == nil) {
+        cell =  [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
+
+    }
+    cell.textLabel.text = [NSString stringWithFormat:@"主标题%@",@(indexPath.row)];
+    cell.detailTextLabel.text = @"副标题";
+    cell.imageView.image = [UIImage imageNamed:@"icon.bundle/video@2x.png"];
+    return cell;
 }
 
 

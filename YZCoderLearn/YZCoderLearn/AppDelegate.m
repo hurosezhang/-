@@ -8,7 +8,9 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-@interface AppDelegate ()
+#import "GTVideoViewController.h"
+
+@interface AppDelegate ()<UITabBarControllerDelegate>
 
 @end
 
@@ -27,11 +29,8 @@
     viewController1.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page@2x.png"];
     viewController1.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x.png"];
     
-    UIViewController *viewController2 = [[UIViewController alloc] init];
-    viewController2.tabBarItem.title = @"视频";
-    viewController2.view.backgroundColor= [UIColor blueColor];
-    viewController2.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/video@2x.png"];
-    viewController2.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/video_selected@2x.png"];
+    GTVideoViewController *viewController2 = [[GTVideoViewController alloc] init];
+ 
     
     UIViewController *viewController3 = [[UIViewController alloc] init];
     viewController3.tabBarItem.title = @"推荐";
@@ -47,12 +46,16 @@
     
     tabBarController.viewControllers = @[viewController1,viewController2,viewController3,viewController4];
       UINavigationController * NavigationController =[[UINavigationController alloc] initWithRootViewController:tabBarController ];
+    tabBarController.delegate = self;
     self.window.rootViewController = NavigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }
 
-
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    
+    NSLog(@"点击一tabbar");
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
