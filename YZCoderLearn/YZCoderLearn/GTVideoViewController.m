@@ -8,7 +8,7 @@
 
 #import "GTVideoViewController.h"
 
-@interface GTVideoViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface GTVideoViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @end
 
@@ -26,6 +26,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     UICollectionViewFlowLayout * flowlayout = [[UICollectionViewFlowLayout alloc] init];
+    flowlayout.minimumLineSpacing = 10;
+    flowlayout.minimumInteritemSpacing = 10;
+    flowlayout.itemSize = CGSizeMake((self.view.frame.size.width - 10) / 2, 200);
+    
     UICollectionView * collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:flowlayout];
     collectionView.delegate = self;
     collectionView.dataSource = self;
@@ -34,7 +38,7 @@
     
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 150;
+    return 20;
 }
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -42,6 +46,14 @@
     cell.backgroundColor = [UIColor brownColor];
     return cell;
     
+}
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.item % 3 == 0) {
+        
+        return CGSizeMake(self.view.frame.size.width, 100);
+    }else {
+        return CGSizeMake((self.view.frame.size.width - 10) / 2, 300);
+    }
 }
 
 /*
