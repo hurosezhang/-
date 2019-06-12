@@ -8,7 +8,7 @@
 
 #import "GTRecommendViewController.h"
 
-@interface GTRecommendViewController ()<UIScrollViewDelegate>
+@interface GTRecommendViewController ()<UIScrollViewDelegate,UIGestureRecognizerDelegate>
 
 @end
 
@@ -37,14 +37,29 @@
     for (NSInteger i = 0; i < 5; i ++) {
         [scrollView addSubview:({
             UIView *view = [[UIView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width * i , 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+            [view addSubview:({
+                UIView *view = [[UIView alloc] initWithFrame:CGRectMake(100, 200, 100, 100)];
+                view.backgroundColor = [UIColor yellowColor];
+                UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewClick)];
+                tapGesture.delegate = self;
+                [view addGestureRecognizer:tapGesture];
+                view;
+            })];
+            
             view.backgroundColor = [colorArr objectAtIndex:i];
+            
             view;
         })];
     }
     scrollView.pagingEnabled = YES;
     [self.view addSubview:scrollView];
 }
-
+- (void)viewClick {
+    NSLog(@"viewClick");
+}
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    return NO;
+}
 /*
 #pragma mark - Navigation
 

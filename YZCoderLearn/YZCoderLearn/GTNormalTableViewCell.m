@@ -14,6 +14,7 @@
 @property (nonatomic, strong) UILabel *comentLabel;
 @property (nonatomic, strong) UILabel *timeLabel;
 @property (nonatomic, strong) UIImageView *rightimageView;
+@property (nonatomic, strong) UIButton *deleButton;
 
 @end
 
@@ -60,6 +61,13 @@
             self.rightimageView.backgroundColor = [UIColor redColor];
             self.rightimageView.contentMode = UIViewContentModeScaleAspectFit;
             self.rightimageView;
+        })];
+        [self.contentView addSubview:({
+            self.deleButton = [[UIButton alloc] initWithFrame:CGRectMake(290, 80, 30, 20)];
+            self.deleButton.backgroundColor = [UIColor blueColor];
+            [self.deleButton setTitle:@"X" forState:UIControlStateNormal];
+            [self.deleButton setTitle:@"V" forState:UIControlStateHighlighted];
+            self.deleButton;
         })];
 
         
