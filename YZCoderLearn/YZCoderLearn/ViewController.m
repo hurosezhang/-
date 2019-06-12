@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "GTNormalTableViewCell.h"
 
 @interface TestView : UIView
 
@@ -88,14 +89,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"id"];
+    GTNormalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"id"];
     if (cell == nil) {
-        cell =  [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
+        cell =  [[GTNormalTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
 
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"主标题%@",@(indexPath.row)];
-    cell.detailTextLabel.text = @"副标题";
-    cell.imageView.image = [UIImage imageNamed:@"icon.bundle/video@2x.png"];
+    [cell layoutTableViewCell];
+//    cell.textLabel.text = [NSString stringWithFormat:@"主标题%@",@(indexPath.row)];
+//    cell.detailTextLabel.text = @"副标题";
+//    cell.imageView.image = [UIImage imageNamed:@"icon.bundle/video@2x.png"];
     return cell;
 }
 

@@ -8,7 +8,7 @@
 
 #import "GTRecommendViewController.h"
 
-@interface GTRecommendViewController ()
+@interface GTRecommendViewController ()<UIScrollViewDelegate>
 
 @end
 
@@ -32,6 +32,7 @@
     scrollView.backgroundColor = [UIColor lightGrayColor];
     scrollView.contentSize = CGSizeMake(self.view.bounds.size.width * 5, self.view.bounds.size.height);
     NSArray * colorArr = @[[UIColor redColor],[UIColor yellowColor],[UIColor blueColor],[UIColor lightGrayColor],[UIColor brownColor]];
+    scrollView.delegate = self;
     
     for (NSInteger i = 0; i < 5; i ++) {
         [scrollView addSubview:({
