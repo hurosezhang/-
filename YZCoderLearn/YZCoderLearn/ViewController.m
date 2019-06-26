@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "GTNormalTableViewCell.h"
+#import "GTDetailViewController.h"
 
 @interface TestView : UIView
 
@@ -79,7 +80,7 @@
     return 100;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIViewController * controllerView = [[UIViewController alloc] init];
+    GTDetailViewController * controllerView = [[GTDetailViewController alloc] init];
     controllerView.title = [NSString stringWithFormat:@"主标题%@",@(indexPath.row)];
     [self.navigationController pushViewController:controllerView animated:YES];
 }
