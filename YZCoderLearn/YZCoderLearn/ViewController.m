@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "GTNormalTableViewCell.h"
 #import "GTDetailViewController.h"
+#import "GTDeleteCellView.h"
 
 @interface TestView : UIView
 
@@ -35,14 +36,19 @@
 }
 
 @end
-@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface ViewController ()<UITableViewDataSource,UITableViewDelegate,GTNormalTableViewCellDelegate>
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray  *dataArr;
 
 @end
 
 @implementation ViewController
 - (instancetype)init {
     if (self = [super init]) {
-        
+        _dataArr = @[].mutableCopy;
+        for (NSInteger i = 0; i < 10; i ++) {
+            [_dataArr addObject:@(i)];
+        }
     }
     return self;
 }
@@ -74,6 +80,7 @@
     tableView.dataSource = self;
     tableView.delegate = self;
     [self.view addSubview: tableView];
+    _tableView = tableView;
     
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -85,7 +92,7 @@
     [self.navigationController pushViewController:controllerView animated:YES];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return self.dataArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -93,7 +100,7 @@
     GTNormalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"id"];
     if (cell == nil) {
         cell =  [[GTNormalTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
-
+        cell.delegate = self;
     }
     [cell layoutTableViewCell];
 //    cell.textLabel.text = [NSString stringWithFormat:@"主标题%@",@(indexPath.row)];
@@ -102,5 +109,15 @@
     return cell;
 }
 
-
+- (void)tableViewCell:(UITableViewCell *)tableViewCell clickDeleteButton:(UIButton *)deleteButton {
+    GTDeleteCellView *deleteCellView = [[GTDeleteCellView alloc] initWithFrame:self.view.bounds];
+    CGRect rect = [tableViewCell convertRect:deleteButton.frame toView:nil];
+    __weak typeof (self) wself = self;
+    [deleteCellView showDeleteViewFromPoint:rect.origin clickBlock:^{
+        __strong typeof (self) strongself = self;
+        [strongself.dataArr removeLastObject];
+        [strongself.tableView deleteRowsAtIndexPaths:@[[strongself.tableView indexPathForCell:tableViewCell]] withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+    }];
+}
 @end

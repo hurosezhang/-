@@ -67,6 +67,7 @@
             self.deleButton.backgroundColor = [UIColor blueColor];
             [self.deleButton setTitle:@"X" forState:UIControlStateNormal];
             [self.deleButton setTitle:@"V" forState:UIControlStateHighlighted];
+            [self.deleButton addTarget:self action:@selector(deleteButtonClick) forControlEvents:UIControlEventTouchUpInside];
             self.deleButton;
         })];
 
@@ -100,6 +101,12 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+- (void)deleteButtonClick {
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(tableViewCell:clickDeleteButton:)]) {
+        [self.delegate tableViewCell:self clickDeleteButton:self.deleButton];
+    }
 }
 
 @end
