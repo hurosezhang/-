@@ -10,6 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ 点击出现的浮层
+ */
 @interface GTDeleteCellView : UIView
 - (void)showDeleteViewFromPoint:(CGPoint)point clickBlock:(dispatch_block_t)clickBlock;
 - (void)dismissDeleteView;

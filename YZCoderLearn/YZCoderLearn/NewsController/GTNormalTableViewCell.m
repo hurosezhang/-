@@ -64,10 +64,16 @@
         })];
         [self.contentView addSubview:({
             self.deleButton = [[UIButton alloc] initWithFrame:CGRectMake(290, 80, 30, 20)];
-            self.deleButton.backgroundColor = [UIColor blueColor];
+//            self.deleButton.backgroundColor = [UIColor blueColor];
             [self.deleButton setTitle:@"X" forState:UIControlStateNormal];
             [self.deleButton setTitle:@"V" forState:UIControlStateHighlighted];
             [self.deleButton addTarget:self action:@selector(deleteButtonClick) forControlEvents:UIControlEventTouchUpInside];
+            self.deleButton.layer.cornerRadius = 10;
+            self.deleButton.layer.masksToBounds = YES;
+            self.deleButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
+            self.deleButton.layer.borderWidth = 2;
+
+            
             self.deleButton;
         })];
 

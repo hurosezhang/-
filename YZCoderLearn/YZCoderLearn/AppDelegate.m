@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "GTNewsViewController.h"
 #import "GTVideoViewController.h"
 #import "GTRecommendViewController.h"
 
@@ -22,9 +22,9 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     UITabBarController * tabBarController = [[UITabBarController alloc] init];
-//  ViewController   * viewController = [[ViewController alloc] init];
+//  GTNewsViewController   * viewController = [[GTNewsViewController alloc] init];
   
-    ViewController *viewController1 = [[ViewController alloc] init];
+    GTNewsViewController *viewController1 = [[GTNewsViewController alloc] init];
     viewController1.tabBarItem.title = @"新闻";
     viewController1.view.backgroundColor= [UIColor purpleColor];
     viewController1.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page@2x.png"];
@@ -36,13 +36,13 @@
     GTRecommendViewController *viewController3 = [[GTRecommendViewController alloc] init];
   
     
-    UIViewController *viewController4 = [[UIViewController alloc] init];
-    viewController4.tabBarItem.title = @"我的";
-    viewController4.view.backgroundColor= [UIColor lightGrayColor];
-    viewController4.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/home@2x.png"];
-    viewController4.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/home_selected@2x.png"];
+    UIViewController *mineController = [[UIViewController alloc] init];
+    mineController.tabBarItem.title = @"我的";
+    mineController.view.backgroundColor= [UIColor lightGrayColor];
+    mineController.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/home@2x.png"];
+    mineController.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/home_selected@2x.png"];
     
-    tabBarController.viewControllers = @[viewController1,viewController2,viewController3,viewController4];
+    tabBarController.viewControllers = @[viewController1,viewController2,viewController3,mineController];
       UINavigationController * NavigationController =[[UINavigationController alloc] initWithRootViewController:tabBarController ];
     tabBarController.delegate = self;
     self.window.rootViewController = NavigationController;
