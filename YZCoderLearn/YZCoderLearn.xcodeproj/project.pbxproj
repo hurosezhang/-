@@ -19,9 +19,12 @@
 		7E7CBD82229E9F4D008DC9B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E7CBD80229E9F4D008DC9B5 /* LaunchScreen.storyboard */; };
 		7E7CBD85229E9F4D008DC9B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7CBD84229E9F4D008DC9B5 /* main.m */; };
 		7E7CBD9022A101E0008DC9B5 /* icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7E7CBD8F22A101E0008DC9B5 /* icon.bundle */; };
+		A0F13F20A23B29FD19BC10D5 /* Pods_YZCoderLearn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83805D071BC85BAB3A5ED5C5 /* Pods_YZCoderLearn.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B8A5FDDF04E62A70BF40FE0 /* Pods-YZCoderLearn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YZCoderLearn.release.xcconfig"; path = "Target Support Files/Pods-YZCoderLearn/Pods-YZCoderLearn.release.xcconfig"; sourceTree = "<group>"; };
+		7355840BFA2DA2D7974CCB35 /* Pods-YZCoderLearn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YZCoderLearn.debug.xcconfig"; path = "Target Support Files/Pods-YZCoderLearn/Pods-YZCoderLearn.debug.xcconfig"; sourceTree = "<group>"; };
 		7E157DEB22C3471900805FD5 /* GTDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTDetailViewController.h; sourceTree = "<group>"; };
 		7E157DEC22C3471900805FD5 /* GTDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTDetailViewController.m; sourceTree = "<group>"; };
 		7E157DEE22C4CAE800805FD5 /* GTDeleteCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTDeleteCellView.h; sourceTree = "<group>"; };
@@ -44,6 +47,7 @@
 		7E7CBD83229E9F4D008DC9B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E7CBD84229E9F4D008DC9B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7E7CBD8F22A101E0008DC9B5 /* icon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = icon.bundle; sourceTree = "<group>"; };
+		83805D071BC85BAB3A5ED5C5 /* Pods_YZCoderLearn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YZCoderLearn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,12 +55,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0F13F20A23B29FD19BC10D5 /* Pods_YZCoderLearn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		295308C199A52C822AE30685 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7355840BFA2DA2D7974CCB35 /* Pods-YZCoderLearn.debug.xcconfig */,
+				5B8A5FDDF04E62A70BF40FE0 /* Pods-YZCoderLearn.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3AFE1596C2F8BB855D4F9CB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83805D071BC85BAB3A5ED5C5 /* Pods_YZCoderLearn.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7E44795922C605BC009B42F3 /* NewsController */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +125,8 @@
 			children = (
 				7E7CBD74229E9F4A008DC9B5 /* YZCoderLearn */,
 				7E7CBD73229E9F4A008DC9B5 /* Products */,
+				295308C199A52C822AE30685 /* Pods */,
+				3AFE1596C2F8BB855D4F9CB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,9 +165,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E7CBD88229E9F4D008DC9B5 /* Build configuration list for PBXNativeTarget "YZCoderLearn" */;
 			buildPhases = (
+				0756D4AC7F95BFA2B9F32DF3 /* [CP] Check Pods Manifest.lock */,
 				7E7CBD6E229E9F4A008DC9B5 /* Sources */,
 				7E7CBD6F229E9F4A008DC9B5 /* Frameworks */,
 				7E7CBD70229E9F4A008DC9B5 /* Resources */,
+				99A7DD0B2C408137EE87BE99 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -197,6 +224,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0756D4AC7F95BFA2B9F32DF3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YZCoderLearn-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99A7DD0B2C408137EE87BE99 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YZCoderLearn/Pods-YZCoderLearn-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YZCoderLearn/Pods-YZCoderLearn-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YZCoderLearn/Pods-YZCoderLearn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7E7CBD6E229E9F4A008DC9B5 /* Sources */ = {
@@ -343,6 +412,7 @@
 		};
 		7E7CBD89229E9F4D008DC9B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7355840BFA2DA2D7974CCB35 /* Pods-YZCoderLearn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -360,6 +430,7 @@
 		};
 		7E7CBD8A229E9F4D008DC9B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B8A5FDDF04E62A70BF40FE0 /* Pods-YZCoderLearn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
