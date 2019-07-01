@@ -12,6 +12,7 @@
 		7E1BA88622A8B1A500262010 /* GTVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1BA88522A8B1A500262010 /* GTVideoViewController.m */; };
 		7E1BA8CD22AE35FB00262010 /* GTRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1BA8CC22AE35FB00262010 /* GTRecommendViewController.m */; };
 		7E1BA8D022B0E0A800262010 /* GTNormalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1BA8CF22B0E0A800262010 /* GTNormalTableViewCell.m */; };
+		7E44796122C9BB0D009B42F3 /* GTListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E44796022C9BB0D009B42F3 /* GTListLoader.m */; };
 		7E7CBD77229E9F4A008DC9B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7CBD76229E9F4A008DC9B5 /* AppDelegate.m */; };
 		7E7CBD7A229E9F4A008DC9B5 /* GTNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7CBD79229E9F4A008DC9B5 /* GTNewsViewController.m */; };
 		7E7CBD7F229E9F4D008DC9B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E7CBD7E229E9F4D008DC9B5 /* Assets.xcassets */; };
@@ -31,6 +32,8 @@
 		7E1BA8CC22AE35FB00262010 /* GTRecommendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTRecommendViewController.m; sourceTree = "<group>"; };
 		7E1BA8CE22B0E0A800262010 /* GTNormalTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTNormalTableViewCell.h; sourceTree = "<group>"; };
 		7E1BA8CF22B0E0A800262010 /* GTNormalTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTNormalTableViewCell.m; sourceTree = "<group>"; };
+		7E44795F22C9BB0D009B42F3 /* GTListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTListLoader.h; sourceTree = "<group>"; };
+		7E44796022C9BB0D009B42F3 /* GTListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTListLoader.m; sourceTree = "<group>"; };
 		7E7CBD72229E9F4A008DC9B5 /* YZCoderLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YZCoderLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E7CBD75229E9F4A008DC9B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7E7CBD76229E9F4A008DC9B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -85,6 +88,15 @@
 			path = list;
 			sourceTree = "<group>";
 		};
+		7E44796222C9BB1A009B42F3 /* loader */ = {
+			isa = PBXGroup;
+			children = (
+				7E44795F22C9BB0D009B42F3 /* GTListLoader.h */,
+				7E44796022C9BB0D009B42F3 /* GTListLoader.m */,
+			);
+			path = loader;
+			sourceTree = "<group>";
+		};
 		7E7CBD69229E9F4A008DC9B5 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +116,7 @@
 		7E7CBD74229E9F4A008DC9B5 /* YZCoderLearn */ = {
 			isa = PBXGroup;
 			children = (
+				7E44796222C9BB1A009B42F3 /* loader */,
 				7E44795922C605BC009B42F3 /* NewsController */,
 				7E7CBD8F22A101E0008DC9B5 /* icon.bundle */,
 				7E7CBD75229E9F4A008DC9B5 /* AppDelegate.h */,
@@ -194,6 +207,7 @@
 				7E7CBD85229E9F4D008DC9B5 /* main.m in Sources */,
 				7E7CBD77229E9F4A008DC9B5 /* AppDelegate.m in Sources */,
 				7E1BA8D022B0E0A800262010 /* GTNormalTableViewCell.m in Sources */,
+				7E44796122C9BB0D009B42F3 /* GTListLoader.m in Sources */,
 				7E157DED22C3471900805FD5 /* GTDetailViewController.m in Sources */,
 				7E1BA8CD22AE35FB00262010 /* GTRecommendViewController.m in Sources */,
 				7E157DF022C4CAE800805FD5 /* GTDeleteCellView.m in Sources */,
