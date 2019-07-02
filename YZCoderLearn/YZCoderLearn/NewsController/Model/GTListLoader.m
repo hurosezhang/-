@@ -8,6 +8,7 @@
 
 #import "GTListLoader.h"
 #import <AFNetworking/AFNetworking.h>
+#import "GTListItem.h"
 @implementation GTListLoader
 - (void)loadlistData {
     NSString *urlString = @"http://v.juhe.cn/toutiao/index?type=top&key=97ad001bfcc2082e2eeaf798bad3d54e";
@@ -29,8 +30,19 @@
 
         NSError *jsonError ;
         id jsonObj = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-//        NSLog(@"%@",jsonObj);
-        
+#warning 类型检查
+        NSArray * dataArr = [((NSDictionary *)[(NSDictionary *)jsonObj objectForKey:@"result"]) objectForKey:@"data"];
+
+        NSMutableArray *listItemArray = @[].mutableCopy;
+        for (NSDictionary *info in dataArr) {
+            GTListItem *listitem = [[GTListItem alloc] init];
+            [listitem configWithDictionary:info];
+            [listItemArray addObject:listitem];
+            
+            
+        }
+        NSLog(@"");
+
     }];
 
     [dataTask resume];
