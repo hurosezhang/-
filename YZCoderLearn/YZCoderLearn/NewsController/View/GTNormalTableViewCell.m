@@ -77,6 +77,15 @@
 
 - (void)layoutTableViewCellWithItem:(GTListItem *)item
 {
+    
+    BOOL haRead = [[NSUserDefaults standardUserDefaults] objectForKey:item.uniqueKey];
+    
+    if (haRead) {
+        self.titleLabel.textColor = [UIColor grayColor];
+    }else {
+        self.titleLabel.textColor = [UIColor blackColor];
+    }
+    
     self.titleLabel.text = item.title;
     self.sourceLabel.text = item.authorName;
     [self.sourceLabel sizeToFit];

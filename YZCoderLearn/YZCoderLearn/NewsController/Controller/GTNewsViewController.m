@@ -122,6 +122,8 @@
     GTDetailViewController *controllerView = [[GTDetailViewController alloc] initWithUrlString:item.articleUrl];
     controllerView.title = [NSString stringWithFormat:@"主标题%@", @(indexPath.row)];
     [self.navigationController pushViewController:controllerView animated:YES];
+    
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:item.uniqueKey];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
