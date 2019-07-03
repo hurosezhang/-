@@ -9,12 +9,13 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+@class GTListItem;
+typedef void(^GTListLoaderFinshBlock)(BOOL success,NSArray<GTListItem *> *dataArray);
 /**
  列表请求
  */
 @interface GTListLoader : NSObject
-- (void)loadlistData;
+- (void)loadlistDataWithFinshBlock:(GTListLoaderFinshBlock)finshBlock;
 @end
 
 NS_ASSUME_NONNULL_END

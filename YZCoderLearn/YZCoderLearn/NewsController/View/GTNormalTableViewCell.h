@@ -9,15 +9,26 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
+@class GTListItem ;
+
 @protocol GTNormalTableViewCellDelegate <NSObject>
 
+/**
+ 点击删除按钮
+
+ @param tableViewCell <#tableViewCell description#>
+ @param deleteButton <#deleteButton description#>
+ */
 - (void)tableViewCell:(UITableViewCell *)tableViewCell clickDeleteButton:(UIButton *)deleteButton;
 
 @end
 
+/**
+ 新闻列表Cell
+ */
 @interface GTNormalTableViewCell : UITableViewCell
 @property (nonatomic, weak) id<GTNormalTableViewCellDelegate> delegate;
-- (void)layoutTableViewCell;
+- (void)layoutTableViewCellWithItem:(GTListItem *)item;
 @end
 
 NS_ASSUME_NONNULL_END

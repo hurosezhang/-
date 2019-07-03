@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface GTDetailViewController : UIViewController
+- (instancetype)initWithUrlString:(NSString *)urlString;
 
 @end
 
