@@ -8,6 +8,7 @@
 
 #import "GTNormalTableViewCell.h"
 #import "GTListItem.h"
+#import "SDWebImage.h"
 @interface GTNormalTableViewCell  ()
 
 @property (nonatomic, strong) UILabel *titleLabel;
@@ -77,15 +78,14 @@
 
 - (void)layoutTableViewCellWithItem:(GTListItem *)item
 {
-    
     BOOL haRead = [[NSUserDefaults standardUserDefaults] objectForKey:item.uniqueKey];
-    
+
     if (haRead) {
         self.titleLabel.textColor = [UIColor grayColor];
-    }else {
+    } else {
         self.titleLabel.textColor = [UIColor blackColor];
     }
-    
+
     self.titleLabel.text = item.title;
     self.sourceLabel.text = item.authorName;
     [self.sourceLabel sizeToFit];
@@ -98,10 +98,28 @@
     [self.timeLabel sizeToFit];
     self.timeLabel.frame = CGRectMake(self.comentLabel.frame.origin.x + self.comentLabel.frame.size.width + 15, self.timeLabel.frame.origin.y, self.timeLabel.frame.size.width, self.timeLabel.frame.size.height);
 
-#warning
-    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:item.picUrl]]];
-
-    self.rightimageView.image = image;
+    [self.rightimageView sd_setImageWithURL:[NSURL URLWithString:item.picUrl] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        
+    }];
+    
+//    NSThread *downLoadImageThread = [[NSThread alloc] initWithBlock:^{
+//        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:item.picUrl]]];
+//        self.rightimageView.image = image;
+//    }];
+//
+//    downLoadImageThread.name = @"downLoadImageThread";
+//
+//    [downLoadImageThread start];
+    
+//    dispatch_queue_global_t downLoadqueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//    dispatch_queue_main_t mainQueue = dispatch_get_main_queue();
+//    dispatch_async(downLoadqueue, ^{
+//        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:item.picUrl]]];
+//        dispatch_async(mainQueue, ^{
+//            self.rightimageView.image = image;
+//        });
+//    });
+    
 }
 
 - (void)awakeFromNib

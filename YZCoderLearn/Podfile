@@ -8,4 +8,5 @@ target 'YZCoderLearn' do
   # Pods for YZCoderLearn
 
 pod 'AFNetworking'
+pod 'SDWebImage'
 end
