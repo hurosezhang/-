@@ -38,8 +38,12 @@ NSArray<GTListItem *> * listData = [self _readDataFromLocal];
         NSError *jsonError;
         id jsonObj = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
 #warning 类型检查
-        NSArray *dataArr = [((NSDictionary *)[(NSDictionary *)jsonObj objectForKey:@"result"]) objectForKey:@"data"];
-
+        NSArray *dataArr ;
+        if (![(NSDictionary *)[(NSDictionary *)jsonObj objectForKey:@"result"] isKindOfClass:[NSNull class]]) {
+            dataArr = [((NSDictionary *)[(NSDictionary *)jsonObj objectForKey:@"result"]) objectForKey:@"data"];
+        }else {
+            dataArr = nil;
+        }
         NSMutableArray *listItemArray = @[].mutableCopy;
         for (NSDictionary *info in dataArr) {
             GTListItem *listitem = [[GTListItem alloc] init];
