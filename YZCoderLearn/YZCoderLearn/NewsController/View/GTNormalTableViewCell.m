@@ -9,6 +9,7 @@
 #import "GTNormalTableViewCell.h"
 #import "GTListItem.h"
 #import "SDWebImage.h"
+#import "GTScreen.h"
 @interface GTNormalTableViewCell  ()
 
 @property (nonatomic, strong) UILabel *titleLabel;
@@ -26,7 +27,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         [self.contentView addSubview:({
-            self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 15, 270, 50)];
+            self.titleLabel = [[UILabel alloc] initWithFrame:UIRect(20, 15, 270, 50) ];
             self.titleLabel.font = [UIFont systemFontOfSize:16];
             self.titleLabel.numberOfLines = 2;
             self.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
@@ -35,21 +36,21 @@
         })];
 
         [self.contentView addSubview:({
-            self.sourceLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 70, 50, 20)];
+            self.sourceLabel = [[UILabel alloc] initWithFrame:UIRect(20, 70, 50, 20)];
             self.sourceLabel.font = [UIFont systemFontOfSize:12];
             self.sourceLabel.textColor = [UIColor grayColor];
 
             self.sourceLabel;
         })];
         [self.contentView addSubview:({
-            self.comentLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 70, 50, 20)];
+            self.comentLabel = [[UILabel alloc] initWithFrame:UIRect(100, 70, 50, 20)];
             self.comentLabel.font = [UIFont systemFontOfSize:12];
             self.comentLabel.textColor = [UIColor grayColor];
 
             self.comentLabel;
         })];
         [self.contentView addSubview:({
-            self.timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(150, 70, 50, 20)];
+            self.timeLabel = [[UILabel alloc] initWithFrame:UIRect(150, 70, 50, 20)];
             self.timeLabel.font = [UIFont systemFontOfSize:12];
             self.timeLabel.textColor = [UIColor grayColor];
 
@@ -57,7 +58,7 @@
         })];
 
         [self.contentView addSubview:({
-            self.rightimageView = [[UIImageView alloc] initWithFrame:CGRectMake(300, 15, 100, 70)];
+            self.rightimageView = [[UIImageView alloc] initWithFrame:UIRect(300, 15, 100, 70)];
             self.rightimageView.contentMode = UIViewContentModeScaleAspectFit;
             self.rightimageView;
         })];
@@ -92,11 +93,11 @@
 
     self.comentLabel.text = item.category;
     [self.comentLabel sizeToFit];
-    self.comentLabel.frame = CGRectMake(self.sourceLabel.frame.origin.x + self.sourceLabel.frame.size.width + 15, self.comentLabel.frame.origin.y, self.comentLabel.frame.size.width, self.comentLabel.frame.size.height);
+    self.comentLabel.frame = CGRectMake(self.sourceLabel.frame.origin.x + self.sourceLabel.frame.size.width + UI(15), self.comentLabel.frame.origin.y, self.comentLabel.frame.size.width, self.comentLabel.frame.size.height);
 
     self.timeLabel.text = item.date;
     [self.timeLabel sizeToFit];
-    self.timeLabel.frame = CGRectMake(self.comentLabel.frame.origin.x + self.comentLabel.frame.size.width + 15, self.timeLabel.frame.origin.y, self.timeLabel.frame.size.width, self.timeLabel.frame.size.height);
+    self.timeLabel.frame = CGRectMake(self.comentLabel.frame.origin.x + self.comentLabel.frame.size.width + UI(15), self.timeLabel.frame.origin.y, self.timeLabel.frame.size.width, self.timeLabel.frame.size.height);
 
     [self.rightimageView sd_setImageWithURL:[NSURL URLWithString:item.picUrl] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
         

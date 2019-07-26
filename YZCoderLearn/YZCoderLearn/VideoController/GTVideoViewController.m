@@ -35,6 +35,8 @@
     UICollectionView * collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:flowlayout];
     collectionView.delegate = self;
     collectionView.dataSource = self;
+    // ios 11才有, 一般用never 适配低版本
+    collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     [collectionView registerClass:[GTVideoCoverView class] forCellWithReuseIdentifier:@"GTVideoCoverView"];
     [self.view addSubview:collectionView];
     
