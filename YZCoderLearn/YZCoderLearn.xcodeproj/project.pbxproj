@@ -16,16 +16,40 @@
 		7E44796122C9BB0D009B42F3 /* GTListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E44796022C9BB0D009B42F3 /* GTListLoader.m */; };
 		7E44796A22CB0D1C009B42F3 /* GTListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E44796922CB0D1C009B42F3 /* GTListItem.m */; };
 		7E6C08E122EADD0F00B57BDA /* GTScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6C08E022EADD0F00B57BDA /* GTScreen.m */; };
+		7E6C08E722F3256600B57BDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E6C08E622F3256500B57BDA /* Assets.xcassets */; };
+		7E6C08EA22F3264D00B57BDA /* GTSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6C08E922F3264D00B57BDA /* GTSplashView.m */; };
+		7E6C08ED22FAE53200B57BDA /* GTMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6C08EC22FAE53200B57BDA /* GTMediator.m */; };
+		7E6C091922FC260200B57BDA /* libGTStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6C091622FC260100B57BDA /* libGTStatic.a */; };
 		7E7CBD77229E9F4A008DC9B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7CBD76229E9F4A008DC9B5 /* AppDelegate.m */; };
 		7E7CBD7A229E9F4A008DC9B5 /* GTNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7CBD79229E9F4A008DC9B5 /* GTNewsViewController.m */; };
-		7E7CBD7F229E9F4D008DC9B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E7CBD7E229E9F4D008DC9B5 /* Assets.xcassets */; };
-		7E7CBD82229E9F4D008DC9B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E7CBD80229E9F4D008DC9B5 /* LaunchScreen.storyboard */; };
 		7E7CBD85229E9F4D008DC9B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7CBD84229E9F4D008DC9B5 /* main.m */; };
 		7E7CBD9022A101E0008DC9B5 /* icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7E7CBD8F22A101E0008DC9B5 /* icon.bundle */; };
 		7E915AE822E93E6D0005B18D /* GTVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E915AE722E93E6D0005B18D /* GTVideoPlayer.m */; };
 		7E915AEB22E9833A0005B18D /* GTVideoToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E915AEA22E9833A0005B18D /* GTVideoToolbar.m */; };
 		A0F13F20A23B29FD19BC10D5 /* Pods_YZCoderLearn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83805D071BC85BAB3A5ED5C5 /* Pods_YZCoderLearn.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7E6C08F122FC236400B57BDA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E6C094C22FC33E500B57BDA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5B8A5FDDF04E62A70BF40FE0 /* Pods-YZCoderLearn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YZCoderLearn.release.xcconfig"; path = "Target Support Files/Pods-YZCoderLearn/Pods-YZCoderLearn.release.xcconfig"; sourceTree = "<group>"; };
@@ -48,13 +72,21 @@
 		7E44796922CB0D1C009B42F3 /* GTListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTListItem.m; sourceTree = "<group>"; };
 		7E6C08DF22EADD0F00B57BDA /* GTScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTScreen.h; sourceTree = "<group>"; };
 		7E6C08E022EADD0F00B57BDA /* GTScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTScreen.m; sourceTree = "<group>"; };
+		7E6C08E622F3256500B57BDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7E6C08E822F3264D00B57BDA /* GTSplashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTSplashView.h; sourceTree = "<group>"; };
+		7E6C08E922F3264D00B57BDA /* GTSplashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTSplashView.m; sourceTree = "<group>"; };
+		7E6C08EB22FAE53200B57BDA /* GTMediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTMediator.h; sourceTree = "<group>"; };
+		7E6C08EC22FAE53200B57BDA /* GTMediator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTMediator.m; sourceTree = "<group>"; };
+		7E6C08F322FC236400B57BDA /* libGTStatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGTStatic.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E6C091622FC260100B57BDA /* libGTStatic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGTStatic.a; sourceTree = "<group>"; };
+		7E6C091722FC260100B57BDA /* GTStatic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTStatic.h; sourceTree = "<group>"; };
+		7E6C091822FC260200B57BDA /* GTStaticTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTStaticTest.h; sourceTree = "<group>"; };
+		7E6C091F22FC31C700B57BDA /* GTFrameWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTFrameWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E7CBD72229E9F4A008DC9B5 /* YZCoderLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YZCoderLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E7CBD75229E9F4A008DC9B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7E7CBD76229E9F4A008DC9B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7E7CBD78229E9F4A008DC9B5 /* GTNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTNewsViewController.h; sourceTree = "<group>"; };
 		7E7CBD79229E9F4A008DC9B5 /* GTNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTNewsViewController.m; sourceTree = "<group>"; };
-		7E7CBD7E229E9F4D008DC9B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7E7CBD81229E9F4D008DC9B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E7CBD83229E9F4D008DC9B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E7CBD84229E9F4D008DC9B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7E7CBD8F22A101E0008DC9B5 /* icon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = icon.bundle; sourceTree = "<group>"; };
@@ -66,10 +98,25 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7E6C08F022FC236400B57BDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E6C091C22FC31C700B57BDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7E7CBD6F229E9F4A008DC9B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E6C091922FC260200B57BDA /* libGTStatic.a in Frameworks */,
 				A0F13F20A23B29FD19BC10D5 /* Pods_YZCoderLearn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,9 +207,20 @@
 			path = VideoController;
 			sourceTree = "<group>";
 		};
+		7E6C091522FC24BF00B57BDA /* GTFrameWork */ = {
+			isa = PBXGroup;
+			children = (
+				7E6C091722FC260100B57BDA /* GTStatic.h */,
+				7E6C091822FC260200B57BDA /* GTStaticTest.h */,
+				7E6C091622FC260100B57BDA /* libGTStatic.a */,
+			);
+			path = GTFrameWork;
+			sourceTree = "<group>";
+		};
 		7E7CBD69229E9F4A008DC9B5 = {
 			isa = PBXGroup;
 			children = (
+				7E6C091522FC24BF00B57BDA /* GTFrameWork */,
 				7E7CBD74229E9F4A008DC9B5 /* YZCoderLearn */,
 				7E7CBD73229E9F4A008DC9B5 /* Products */,
 				295308C199A52C822AE30685 /* Pods */,
@@ -174,6 +232,8 @@
 			isa = PBXGroup;
 			children = (
 				7E7CBD72229E9F4A008DC9B5 /* YZCoderLearn.app */,
+				7E6C08F322FC236400B57BDA /* libGTStatic.a */,
+				7E6C091F22FC31C700B57BDA /* GTFrameWork.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,12 +246,15 @@
 				7E7CBD8F22A101E0008DC9B5 /* icon.bundle */,
 				7E7CBD75229E9F4A008DC9B5 /* AppDelegate.h */,
 				7E7CBD76229E9F4A008DC9B5 /* AppDelegate.m */,
+				7E6C08E622F3256500B57BDA /* Assets.xcassets */,
 				7E6C08DF22EADD0F00B57BDA /* GTScreen.h */,
 				7E6C08E022EADD0F00B57BDA /* GTScreen.m */,
+				7E6C08E822F3264D00B57BDA /* GTSplashView.h */,
+				7E6C08E922F3264D00B57BDA /* GTSplashView.m */,
+				7E6C08EB22FAE53200B57BDA /* GTMediator.h */,
+				7E6C08EC22FAE53200B57BDA /* GTMediator.m */,
 				7E1BA8CB22AE35FB00262010 /* GTRecommendViewController.h */,
 				7E1BA8CC22AE35FB00262010 /* GTRecommendViewController.m */,
-				7E7CBD7E229E9F4D008DC9B5 /* Assets.xcassets */,
-				7E7CBD80229E9F4D008DC9B5 /* LaunchScreen.storyboard */,
 				7E7CBD83229E9F4D008DC9B5 /* Info.plist */,
 				7E7CBD84229E9F4D008DC9B5 /* main.m */,
 			);
@@ -200,7 +263,52 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		7E6C091A22FC31C700B57BDA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		7E6C08F222FC236400B57BDA /* GTStatic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E6C08F922FC236400B57BDA /* Build configuration list for PBXNativeTarget "GTStatic" */;
+			buildPhases = (
+				7E6C08EF22FC236400B57BDA /* Sources */,
+				7E6C08F022FC236400B57BDA /* Frameworks */,
+				7E6C08F122FC236400B57BDA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GTStatic;
+			productName = GTStatic;
+			productReference = 7E6C08F322FC236400B57BDA /* libGTStatic.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7E6C091E22FC31C700B57BDA /* GTFrameWork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E6C092822FC31C800B57BDA /* Build configuration list for PBXNativeTarget "GTFrameWork" */;
+			buildPhases = (
+				7E6C091A22FC31C700B57BDA /* Headers */,
+				7E6C091B22FC31C700B57BDA /* Sources */,
+				7E6C091C22FC31C700B57BDA /* Frameworks */,
+				7E6C091D22FC31C700B57BDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GTFrameWork;
+			productName = GTFrameWork;
+			productReference = 7E6C091F22FC31C700B57BDA /* GTFrameWork.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		7E7CBD71229E9F4A008DC9B5 /* YZCoderLearn */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E7CBD88229E9F4D008DC9B5 /* Build configuration list for PBXNativeTarget "YZCoderLearn" */;
@@ -210,6 +318,7 @@
 				7E7CBD6F229E9F4A008DC9B5 /* Frameworks */,
 				7E7CBD70229E9F4A008DC9B5 /* Resources */,
 				99A7DD0B2C408137EE87BE99 /* [CP] Embed Pods Frameworks */,
+				7E6C094C22FC33E500B57BDA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -229,6 +338,12 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = xinmei;
 				TargetAttributes = {
+					7E6C08F222FC236400B57BDA = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					7E6C091E22FC31C700B57BDA = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
 					7E7CBD71229E9F4A008DC9B5 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
@@ -248,18 +363,26 @@
 			projectRoot = "";
 			targets = (
 				7E7CBD71229E9F4A008DC9B5 /* YZCoderLearn */,
+				7E6C08F222FC236400B57BDA /* GTStatic */,
+				7E6C091E22FC31C700B57BDA /* GTFrameWork */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7E6C091D22FC31C700B57BDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7E7CBD70229E9F4A008DC9B5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E6C08E722F3256600B57BDA /* Assets.xcassets in Resources */,
 				7E7CBD9022A101E0008DC9B5 /* icon.bundle in Resources */,
-				7E7CBD82229E9F4D008DC9B5 /* LaunchScreen.storyboard in Resources */,
-				7E7CBD7F229E9F4D008DC9B5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +431,20 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7E6C08EF22FC236400B57BDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E6C091B22FC31C700B57BDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7E7CBD6E229E9F4A008DC9B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -319,9 +456,11 @@
 				7E7CBD85229E9F4D008DC9B5 /* main.m in Sources */,
 				7E7CBD77229E9F4A008DC9B5 /* AppDelegate.m in Sources */,
 				7E1BA8D022B0E0A800262010 /* GTNormalTableViewCell.m in Sources */,
+				7E6C08ED22FAE53200B57BDA /* GTMediator.m in Sources */,
 				7E2D95BB22CCAB610076227F /* GTVideoCoverView.m in Sources */,
 				7E44796122C9BB0D009B42F3 /* GTListLoader.m in Sources */,
 				7E157DED22C3471900805FD5 /* GTDetailViewController.m in Sources */,
+				7E6C08EA22F3264D00B57BDA /* GTSplashView.m in Sources */,
 				7E44796A22CB0D1C009B42F3 /* GTListItem.m in Sources */,
 				7E1BA8CD22AE35FB00262010 /* GTRecommendViewController.m in Sources */,
 				7E157DF022C4CAE800805FD5 /* GTDeleteCellView.m in Sources */,
@@ -331,18 +470,93 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		7E7CBD80229E9F4D008DC9B5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7E7CBD81229E9F4D008DC9B5 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
+		7E6C08FA22FC236400B57BDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 344BN3S4Y9;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7E6C08FB22FC236400B57BDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 344BN3S4Y9;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7E6C092922FC31C800B57BDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 344BN3S4Y9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GTFrameWork",
+				);
+				INFOPLIST_FILE = GTFrameWork/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xinmei.GTFrameWork;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7E6C092A22FC31C800B57BDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 344BN3S4Y9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GTFrameWork",
+				);
+				INFOPLIST_FILE = GTFrameWork/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xinmei.GTFrameWork;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		7E7CBD86229E9F4D008DC9B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -460,12 +674,21 @@
 			baseConfigurationReference = 7355840BFA2DA2D7974CCB35 /* Pods-YZCoderLearn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 344BN3S4Y9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GTFrameWork",
+				);
 				INFOPLIST_FILE = YZCoderLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GTFrameWork",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xinmei.YZCoderLearn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -478,12 +701,21 @@
 			baseConfigurationReference = 5B8A5FDDF04E62A70BF40FE0 /* Pods-YZCoderLearn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 344BN3S4Y9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GTFrameWork",
+				);
 				INFOPLIST_FILE = YZCoderLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GTFrameWork",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xinmei.YZCoderLearn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -494,6 +726,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7E6C08F922FC236400B57BDA /* Build configuration list for PBXNativeTarget "GTStatic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E6C08FA22FC236400B57BDA /* Debug */,
+				7E6C08FB22FC236400B57BDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E6C092822FC31C800B57BDA /* Build configuration list for PBXNativeTarget "GTFrameWork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E6C092922FC31C800B57BDA /* Debug */,
+				7E6C092A22FC31C800B57BDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7E7CBD6D229E9F4A008DC9B5 /* Build configuration list for PBXProject "YZCoderLearn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

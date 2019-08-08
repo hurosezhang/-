@@ -8,10 +8,12 @@
 
 #import "GTNewsViewController.h"
 #import "GTNormalTableViewCell.h"
-#import "GTDetailViewController.h"
+//#import "GTDetailViewController.h"
 #import "GTDeleteCellView.h"
 #import "GTListLoader.h"
 #import "GTListItem.h"
+#import "GTMediator.h"
+
 @interface TestView : UIView
 
 @end
@@ -119,9 +121,16 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     GTListItem *item = [self.dataArr objectAtIndex:indexPath.row];
-    GTDetailViewController *controllerView = [[GTDetailViewController alloc] initWithUrlString:item.articleUrl];
-    controllerView.title = [NSString stringWithFormat:@"主标题%@", @(indexPath.row)];
-    [self.navigationController pushViewController:controllerView animated:YES];
+//    __kindof UIViewController *controllerView = [GTMediator detailViewControllerWithUrl:item.articleUrl];
+//    GTDetailViewController *controllerView = [[GTDetailViewController alloc] initWithUrlString:item.articleUrl];
+    
+//    controllerView.title = [NSString stringWithFormat:@"主标题%@", @(indexPath.row)];
+//    [self.navigationController pushViewController:controllerView animated:YES];
+    
+//    [GTMediator openUrl:@"detail://" params:@{@"url":  item.articleUrl,@"controller" : self.navigationController}];
+    Class cls = [GTMediator classForPtotol:@protocol(GTDetailViewControllerProtocol)];
+    [self.navigationController pushViewController:[[cls alloc] detailViewControllerWithUrl:item.articleUrl] animated:YES];
+
     
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:item.uniqueKey];
 }
