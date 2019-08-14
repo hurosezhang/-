@@ -11,6 +11,9 @@
 #import "GTVideoViewController.h"
 #import "GTRecommendViewController.h"
 #import "GTSplashView.h"
+#import "GTLocation.h"
+#import "GTNotification.h"
+
 @interface AppDelegate ()<UITabBarControllerDelegate>
 
 @end
@@ -50,6 +53,9 @@
         splashView;
         
     })];
+    
+    [[GTLocation locationManager] checkLocationAuthorization];
+    [[GTNotification notificationManager] checknotificationAuthorization];
     return YES;
 }
 

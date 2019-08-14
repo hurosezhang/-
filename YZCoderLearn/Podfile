@@ -9,4 +9,6 @@ target 'YZCoderLearn' do
 
 pod 'AFNetworking'
 pod 'SDWebImage'
+pod 'CocoaLumberjack'
+
 end

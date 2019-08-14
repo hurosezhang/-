@@ -36,6 +36,13 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+<<<<<<< HEAD
+=======
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>需要您的位置信息,为你推送本地新闻</string>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+>>>>>>> master
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
