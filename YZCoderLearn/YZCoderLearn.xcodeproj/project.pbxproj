@@ -15,21 +15,36 @@
 		7E2D95BB22CCAB610076227F /* GTVideoCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D95BA22CCAB610076227F /* GTVideoCoverView.m */; };
 		7E44796122C9BB0D009B42F3 /* GTListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E44796022C9BB0D009B42F3 /* GTListLoader.m */; };
 		7E44796A22CB0D1C009B42F3 /* GTListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E44796922CB0D1C009B42F3 /* GTListItem.m */; };
+		7E615F0F2302FA0100B5F933 /* GTLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E615F0E2302FA0100B5F933 /* GTLocation.m */; };
+		7E615F122303A29500B5F933 /* GTNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E615F112303A29500B5F933 /* GTNotification.m */; };
 		7E6C08E122EADD0F00B57BDA /* GTScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6C08E022EADD0F00B57BDA /* GTScreen.m */; };
 		7E6C08E722F3256600B57BDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E6C08E622F3256500B57BDA /* Assets.xcassets */; };
 		7E6C08EA22F3264D00B57BDA /* GTSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6C08E922F3264D00B57BDA /* GTSplashView.m */; };
 		7E6C08ED22FAE53200B57BDA /* GTMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6C08EC22FAE53200B57BDA /* GTMediator.m */; };
 		7E6C091922FC260200B57BDA /* libGTStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6C091622FC260100B57BDA /* libGTStatic.a */; };
-		7E615F0F2302FA0100B5F933 /* GTLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E615F0E2302FA0100B5F933 /* GTLocation.m */; };
-		7E615F122303A29500B5F933 /* GTNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E615F112303A29500B5F933 /* GTNotification.m */; };
 		7E7CBD77229E9F4A008DC9B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7CBD76229E9F4A008DC9B5 /* AppDelegate.m */; };
 		7E7CBD7A229E9F4A008DC9B5 /* GTNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7CBD79229E9F4A008DC9B5 /* GTNewsViewController.m */; };
 		7E7CBD85229E9F4D008DC9B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7CBD84229E9F4D008DC9B5 /* main.m */; };
 		7E7CBD9022A101E0008DC9B5 /* icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7E7CBD8F22A101E0008DC9B5 /* icon.bundle */; };
+		7E8A301A23043E5300353225 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E8A301923043E5300353225 /* NotificationCenter.framework */; };
+		7E8A301E23043E5300353225 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8A301D23043E5300353225 /* TodayViewController.m */; };
+		7E8A302523043E5300353225 /* GTToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7E8A301823043E5300353225 /* GTToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7E8A302D2304459100353225 /* GTSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8A302C2304459100353225 /* GTSearchBar.m */; };
+		7E8A303023044CCF00353225 /* GTCommentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8A302F23044CCF00353225 /* GTCommentManager.m */; };
 		7E915AE822E93E6D0005B18D /* GTVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E915AE722E93E6D0005B18D /* GTVideoPlayer.m */; };
 		7E915AEB22E9833A0005B18D /* GTVideoToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E915AEA22E9833A0005B18D /* GTVideoToolbar.m */; };
 		A0F13F20A23B29FD19BC10D5 /* Pods_YZCoderLearn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83805D071BC85BAB3A5ED5C5 /* Pods_YZCoderLearn.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7E8A302323043E5300353225 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E7CBD6A229E9F4A008DC9B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E8A301723043E5300353225;
+			remoteInfo = GTToday;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		7E6C08F122FC236400B57BDA /* CopyFiles */ = {
@@ -49,6 +64,17 @@
 			files = (
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E8A302923043E5300353225 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7E8A302523043E5300353225 /* GTToday.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -72,6 +98,10 @@
 		7E44796022C9BB0D009B42F3 /* GTListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTListLoader.m; sourceTree = "<group>"; };
 		7E44796822CB0D1C009B42F3 /* GTListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTListItem.h; sourceTree = "<group>"; };
 		7E44796922CB0D1C009B42F3 /* GTListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTListItem.m; sourceTree = "<group>"; };
+		7E615F0D2302FA0100B5F933 /* GTLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTLocation.h; sourceTree = "<group>"; };
+		7E615F0E2302FA0100B5F933 /* GTLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTLocation.m; sourceTree = "<group>"; };
+		7E615F102303A29500B5F933 /* GTNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTNotification.h; sourceTree = "<group>"; };
+		7E615F112303A29500B5F933 /* GTNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTNotification.m; sourceTree = "<group>"; };
 		7E6C08DF22EADD0F00B57BDA /* GTScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTScreen.h; sourceTree = "<group>"; };
 		7E6C08E022EADD0F00B57BDA /* GTScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTScreen.m; sourceTree = "<group>"; };
 		7E6C08E622F3256500B57BDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,10 +114,6 @@
 		7E6C091722FC260100B57BDA /* GTStatic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTStatic.h; sourceTree = "<group>"; };
 		7E6C091822FC260200B57BDA /* GTStaticTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTStaticTest.h; sourceTree = "<group>"; };
 		7E6C091F22FC31C700B57BDA /* GTFrameWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTFrameWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E615F0D2302FA0100B5F933 /* GTLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTLocation.h; sourceTree = "<group>"; };
-		7E615F0E2302FA0100B5F933 /* GTLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTLocation.m; sourceTree = "<group>"; };
-		7E615F102303A29500B5F933 /* GTNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTNotification.h; sourceTree = "<group>"; };
-		7E615F112303A29500B5F933 /* GTNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTNotification.m; sourceTree = "<group>"; };
 		7E7CBD72229E9F4A008DC9B5 /* YZCoderLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YZCoderLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E7CBD75229E9F4A008DC9B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7E7CBD76229E9F4A008DC9B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -96,6 +122,18 @@
 		7E7CBD83229E9F4D008DC9B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E7CBD84229E9F4D008DC9B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7E7CBD8F22A101E0008DC9B5 /* icon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = icon.bundle; sourceTree = "<group>"; };
+		7E8A2FF12303B8F200353225 /* YZCoderLearn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YZCoderLearn.entitlements; sourceTree = "<group>"; };
+		7E8A301323043E1500353225 /* YZCoderLearn copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "YZCoderLearn copy-Info.plist"; path = "/Users/miracle/Desktop/今日头条代码/CopyTouTiao/YZCoderLearn/YZCoderLearn copy-Info.plist"; sourceTree = "<absolute>"; };
+		7E8A301823043E5300353225 /* GTToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GTToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E8A301923043E5300353225 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		7E8A301C23043E5300353225 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		7E8A301D23043E5300353225 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		7E8A302223043E5300353225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E8A302A2304433000353225 /* GTToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GTToday.entitlements; sourceTree = "<group>"; };
+		7E8A302B2304459100353225 /* GTSearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTSearchBar.h; sourceTree = "<group>"; };
+		7E8A302C2304459100353225 /* GTSearchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTSearchBar.m; sourceTree = "<group>"; };
+		7E8A302E23044CCF00353225 /* GTCommentManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTCommentManager.h; sourceTree = "<group>"; };
+		7E8A302F23044CCF00353225 /* GTCommentManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTCommentManager.m; sourceTree = "<group>"; };
 		7E915AE622E93E6D0005B18D /* GTVideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTVideoPlayer.h; sourceTree = "<group>"; };
 		7E915AE722E93E6D0005B18D /* GTVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTVideoPlayer.m; sourceTree = "<group>"; };
 		7E915AE922E9833A0005B18D /* GTVideoToolbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTVideoToolbar.h; sourceTree = "<group>"; };
@@ -127,6 +165,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7E8A301523043E5300353225 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E8A301A23043E5300353225 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -143,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				83805D071BC85BAB3A5ED5C5 /* Pods_YZCoderLearn.framework */,
+				7E8A301923043E5300353225 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -194,6 +241,10 @@
 				7E1BA8CF22B0E0A800262010 /* GTNormalTableViewCell.m */,
 				7E157DEE22C4CAE800805FD5 /* GTDeleteCellView.h */,
 				7E157DEF22C4CAE800805FD5 /* GTDeleteCellView.m */,
+				7E8A302B2304459100353225 /* GTSearchBar.h */,
+				7E8A302C2304459100353225 /* GTSearchBar.m */,
+				7E8A302E23044CCF00353225 /* GTCommentManager.h */,
+				7E8A302F23044CCF00353225 /* GTCommentManager.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -228,9 +279,11 @@
 			children = (
 				7E6C091522FC24BF00B57BDA /* GTFrameWork */,
 				7E7CBD74229E9F4A008DC9B5 /* YZCoderLearn */,
+				7E8A301B23043E5300353225 /* GTToday */,
 				7E7CBD73229E9F4A008DC9B5 /* Products */,
 				295308C199A52C822AE30685 /* Pods */,
 				3AFE1596C2F8BB855D4F9CB4 /* Frameworks */,
+				7E8A301323043E1500353225 /* YZCoderLearn copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -240,6 +293,7 @@
 				7E7CBD72229E9F4A008DC9B5 /* YZCoderLearn.app */,
 				7E6C08F322FC236400B57BDA /* libGTStatic.a */,
 				7E6C091F22FC31C700B57BDA /* GTFrameWork.framework */,
+				7E8A301823043E5300353225 /* GTToday.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -247,6 +301,7 @@
 		7E7CBD74229E9F4A008DC9B5 /* YZCoderLearn */ = {
 			isa = PBXGroup;
 			children = (
+				7E8A2FF12303B8F200353225 /* YZCoderLearn.entitlements */,
 				7E44796C22CCA8FE009B42F3 /* VideoController */,
 				7E44795922C605BC009B42F3 /* NewsController */,
 				7E7CBD8F22A101E0008DC9B5 /* icon.bundle */,
@@ -269,6 +324,17 @@
 				7E615F112303A29500B5F933 /* GTNotification.m */,
 			);
 			path = YZCoderLearn;
+			sourceTree = "<group>";
+		};
+		7E8A301B23043E5300353225 /* GTToday */ = {
+			isa = PBXGroup;
+			children = (
+				7E8A302A2304433000353225 /* GTToday.entitlements */,
+				7E8A301C23043E5300353225 /* TodayViewController.h */,
+				7E8A301D23043E5300353225 /* TodayViewController.m */,
+				7E8A302223043E5300353225 /* Info.plist */,
+			);
+			path = GTToday;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,15 +395,34 @@
 				7E7CBD70229E9F4A008DC9B5 /* Resources */,
 				99A7DD0B2C408137EE87BE99 /* [CP] Embed Pods Frameworks */,
 				7E6C094C22FC33E500B57BDA /* Embed Frameworks */,
+				7E8A302923043E5300353225 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7E8A302423043E5300353225 /* PBXTargetDependency */,
 			);
 			name = YZCoderLearn;
 			productName = YZCoderLearn;
 			productReference = 7E7CBD72229E9F4A008DC9B5 /* YZCoderLearn.app */;
 			productType = "com.apple.product-type.application";
+		};
+		7E8A301723043E5300353225 /* GTToday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E8A302623043E5300353225 /* Build configuration list for PBXNativeTarget "GTToday" */;
+			buildPhases = (
+				7E8A301423043E5300353225 /* Sources */,
+				7E8A301523043E5300353225 /* Frameworks */,
+				7E8A301623043E5300353225 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GTToday;
+			productName = GTToday;
+			productReference = 7E8A301823043E5300353225 /* GTToday.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -356,6 +441,22 @@
 					};
 					7E7CBD71229E9F4A008DC9B5 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					7E8A301723043E5300353225 = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -375,6 +476,7 @@
 				7E7CBD71229E9F4A008DC9B5 /* YZCoderLearn */,
 				7E6C08F222FC236400B57BDA /* GTStatic */,
 				7E6C091E22FC31C700B57BDA /* GTFrameWork */,
+				7E8A301723043E5300353225 /* GTToday */,
 			);
 		};
 /* End PBXProject section */
@@ -393,6 +495,13 @@
 			files = (
 				7E6C08E722F3256600B57BDA /* Assets.xcassets in Resources */,
 				7E7CBD9022A101E0008DC9B5 /* icon.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E8A301623043E5300353225 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,11 +568,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E8A302D2304459100353225 /* GTSearchBar.m in Sources */,
 				7E6C08E122EADD0F00B57BDA /* GTScreen.m in Sources */,
 				7E7CBD7A229E9F4A008DC9B5 /* GTNewsViewController.m in Sources */,
 				7E915AE822E93E6D0005B18D /* GTVideoPlayer.m in Sources */,
 				7E915AEB22E9833A0005B18D /* GTVideoToolbar.m in Sources */,
 				7E615F122303A29500B5F933 /* GTNotification.m in Sources */,
+				7E8A303023044CCF00353225 /* GTCommentManager.m in Sources */,
 				7E615F0F2302FA0100B5F933 /* GTLocation.m in Sources */,
 				7E7CBD85229E9F4D008DC9B5 /* main.m in Sources */,
 				7E7CBD77229E9F4A008DC9B5 /* AppDelegate.m in Sources */,
@@ -480,7 +591,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7E8A301423043E5300353225 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E8A301E23043E5300353225 /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7E8A302423043E5300353225 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E8A301723043E5300353225 /* GTToday */;
+			targetProxy = 7E8A302323043E5300353225 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		7E6C08FA22FC236400B57BDA /* Debug */ = {
@@ -687,6 +814,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = YZCoderLearn/YZCoderLearn.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 344BN3S4Y9;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -714,6 +842,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = YZCoderLearn/YZCoderLearn.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 344BN3S4Y9;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -731,6 +860,42 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xinmei.YZCoderLearn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7E8A302723043E5300353225 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 344BN3S4Y9;
+				INFOPLIST_FILE = GTToday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xinmei.YZCoderLearn.GTToday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7E8A302823043E5300353225 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 344BN3S4Y9;
+				INFOPLIST_FILE = GTToday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xinmei.YZCoderLearn.GTToday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -770,6 +935,15 @@
 			buildConfigurations = (
 				7E7CBD89229E9F4D008DC9B5 /* Debug */,
 				7E7CBD8A229E9F4D008DC9B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E8A302623043E5300353225 /* Build configuration list for PBXNativeTarget "GTToday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E8A302723043E5300353225 /* Debug */,
+				7E8A302823043E5300353225 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
