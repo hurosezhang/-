@@ -10,6 +10,8 @@
 #import "GTNewsViewController.h"
 #import "GTVideoViewController.h"
 #import "GTRecommendViewController.h"
+#import "GTLocation.h"
+#import "GTNotification.h"
 
 @interface AppDelegate ()<UITabBarControllerDelegate>
 
@@ -45,6 +47,9 @@
     tabBarController.delegate = self;
     self.window.rootViewController = NavigationController;
     [self.window makeKeyAndVisible];
+    
+    [[GTLocation locationManager] checkLocationAuthorization];
+    [[GTNotification notificationManager] checknotificationAuthorization];
     return YES;
 }
 
